@@ -78,6 +78,8 @@ Source35:	http://tesseract-ocr.googlecode.com/files/ukr.traineddata.gz
 # Source35-md5:	56a82ac3994f0552d54fd14ff5ed6817
 Source36:	http://tesseract-ocr.googlecode.com/files/vie.traineddata.gz
 # Source36-md5:	af75c7a696b18a1d2e4f7e21a222cf95
+Source37:	http://tesseract-ocr.googlecode.com/files/chr.traineddata.gz
+# Source37-md5:	6b2daa1f32e6234aa9a528dbfcd0c66e
 URL:		http://code.google.com/p/tesseract-ocr/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -163,6 +165,21 @@ Traditional language.
 %description lang-zh_TW -l pl.UTF-8
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 chińskiego tradycyjnego.
+
+%package lang-chr
+Summary:	Cherokee language data for Tesseract
+Summary(pl.UTF-8):	Dane języka czerokeskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= 3.00
+Provides:	tesseract-data = %{version}
+
+%description lang-chr
+This package contains the data files required to recognize Cherokee
+language.
+
+%description lang-chr -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+czerokeskiego.
 
 %package lang-da
 Summary:	Danish language data for Tesseract
@@ -597,9 +614,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/tessdata
 
 for l in \
-	bul cat ces chi_sim chi_tra dan dan-frak deu deu-frak ell eng fin fra \
-	hun ind ita jpn kor lav lit nld nor pol por ron rus slk slv spa srp \
-	swe swe-frak tgl tur ukr vie ; do
+	bul cat ces chi_sim chi_tra chr dan dan-frak deu deu-frak ell eng fin \
+	fra hun ind ita jpn kor lav lit nld nor pol por ron rus slk slv spa \
+	srp swe swe-frak tgl tur ukr vie ; do
 	gzip -dc $RPM_SOURCE_DIR/${l}.traineddata.gz > $RPM_BUILD_ROOT%{_datadir}/tessdata/${l}.traineddata
 done
 
@@ -625,6 +642,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-zh_TW
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/chi_tra.traineddata
+
+%files lang-chr
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/chr.traineddata
 
 %files lang-da
 %defattr(644,root,root,755)
