@@ -1,85 +1,95 @@
 Summary:	Trained data for Tesseract Open Source OCR Engine
 Summary(pl.UTF-8):	Wytrenowane dane dla Tesseracta - silnika OCR o otwartych źródłach
 Name:		tesseract-data
-Version:	3.00
+Version:	3.01
 Release:	1
 License:	Apache v2.0
 Group:		Applications/Graphics
 #SourceDownload: http://code.google.com/p/tesseract-ocr/downloads/list
-Source1:	http://tesseract-ocr.googlecode.com/files/bul.traineddata.gz
-# Source1-md5:	a7501f9a48bc7ef2fa50cba8b8f0c7b1
-Source2:	http://tesseract-ocr.googlecode.com/files/cat.traineddata.gz
-# Source2-md5:	308099b2b95834916ec410191c86cd48
-Source3:	http://tesseract-ocr.googlecode.com/files/ces.traineddata.gz
-# Source3-md5:	2e97c952075064834f1cad6a133970fa
-Source4:	http://tesseract-ocr.googlecode.com/files/chi_sim.traineddata.gz
-# Source4-md5:	127e0b742b615d81c3b97a555acd8285
-Source5:	http://tesseract-ocr.googlecode.com/files/chi_tra.traineddata.gz
-# Source5-md5:	06fce5f5c0221286eab591819406d91e
-Source6:	http://tesseract-ocr.googlecode.com/files/dan.traineddata.gz
-# Source6-md5:	7aaeb321dbf069d14d2601dc36d3dddc
-Source7:	http://tesseract-ocr.googlecode.com/files/dan-frak.traineddata.gz
-# Source7-md5:	cfa8a81df6a34940604fafa7353ffc43
-Source8:	http://tesseract-ocr.googlecode.com/files/deu.traineddata.gz
-# Source8-md5:	be81a761f61800f6d39393a31435fff3
-Source9:	http://tesseract-ocr.googlecode.com/files/deu-frak.traineddata.gz
-# Source9-md5:	e3117394f775a720117efadda202af50
-Source10:	http://tesseract-ocr.googlecode.com/files/ell.traineddata.gz
-# Source10-md5:	0d3a21c18f752eb058e7b854c37b7a69
-Source11:	http://tesseract-ocr.googlecode.com/files/eng.traineddata.gz
-# Source11-md5:	d91041ad156cf2db36664e91ef799451
-Source12:	http://tesseract-ocr.googlecode.com/files/fin.traineddata.gz
-# Source12-md5:	33812ef03197dce20b8c888409d8541a
-Source13:	http://tesseract-ocr.googlecode.com/files/fra.traineddata.gz
-# Source13-md5:	e6000550883684b5e93b7e0a21016287
-Source14:	http://tesseract-ocr.googlecode.com/files/hun.traineddata.gz
-# Source14-md5:	966fa3ebe24d7dfade951e0a4a9f52b5
-Source15:	http://tesseract-ocr.googlecode.com/files/ind.traineddata.gz
-# Source15-md5:	f4ae2e5668f693cc51c6e3c3f57a8f1d
-Source16:	http://tesseract-ocr.googlecode.com/files/ita.traineddata.gz
-# Source16-md5:	9a307661a010703cd2bb265a3da5eaff
-Source17:	http://tesseract-ocr.googlecode.com/files/jpn.traineddata.gz
-# Source17-md5:	cad3dd7c9401fa0676bf195456ba0c14
-Source18:	http://tesseract-ocr.googlecode.com/files/kor.traineddata.gz
-# Source18-md5:	909b811739b2e7d51cc3ca109998353a
-Source19:	http://tesseract-ocr.googlecode.com/files/lav.traineddata.gz
-# Source19-md5:	1f366f55e5e0725deb751ec847bf42dc
-Source20:	http://tesseract-ocr.googlecode.com/files/lit.traineddata.gz
-# Source20-md5:	1b4460ab998151f1ed8e48928ded58be
-Source21:	http://tesseract-ocr.googlecode.com/files/nld.traineddata.gz
-# Source21-md5:	89992f69802b9f4a36fec40efd95c503
-Source22:	http://tesseract-ocr.googlecode.com/files/nor.traineddata.gz
-# Source22-md5:	e09cc75fa17b8d4a5c2d02de73267aae
-Source23:	http://tesseract-ocr.googlecode.com/files/pol.traineddata.gz
-# Source23-md5:	c3d6447245663138f1d3aa4567c72192
-Source24:	http://tesseract-ocr.googlecode.com/files/por.traineddata.gz
-# Source24-md5:	d0b59fcfd80f9e09be890647ae93f00d
-Source25:	http://tesseract-ocr.googlecode.com/files/ron.traineddata.gz
-# Source25-md5:	7b50075692e7a07ac8f59e0cde51cfb9
-Source26:	http://tesseract-ocr.googlecode.com/files/rus.traineddata.gz
-# Source26-md5:	c477b7faddc044a4595135d0378be34c
-Source29:	http://tesseract-ocr.googlecode.com/files/slk.traineddata.gz
-# Source29-md5:	2e7fbf80215b38f423dcf78e396b92d7
-Source27:	http://tesseract-ocr.googlecode.com/files/slv.traineddata.gz
-# Source27-md5:	defc498fa09480ef0052fde79f4f84e5
-Source28:	http://tesseract-ocr.googlecode.com/files/spa.traineddata.gz
-# Source28-md5:	dd9078211127189995504f034468fcd6
-Source30:	http://tesseract-ocr.googlecode.com/files/srp.traineddata.gz
-# Source30-md5:	c1e0f0ef07d26a72063802370bbfe2c9
-Source31:	http://tesseract-ocr.googlecode.com/files/swe.traineddata.gz
-# Source31-md5:	3787ff0fc1a07517203466830f6f868e
-Source32:	http://tesseract-ocr.googlecode.com/files/swe-frak.traineddata.gz
-# Source32-md5:	fa11947f6617cfce96174eaec1d940ec
-Source33:	http://tesseract-ocr.googlecode.com/files/tgl.traineddata.gz
-# Source33-md5:	af86cab0da52fff7e83f9c7668617a21
-Source34:	http://tesseract-ocr.googlecode.com/files/tur.traineddata.gz
-# Source34-md5:	b0f4798bf1f9ee541ae73aff49f08821
-Source35:	http://tesseract-ocr.googlecode.com/files/ukr.traineddata.gz
-# Source35-md5:	56a82ac3994f0552d54fd14ff5ed6817
-Source36:	http://tesseract-ocr.googlecode.com/files/vie.traineddata.gz
-# Source36-md5:	af75c7a696b18a1d2e4f7e21a222cf95
-Source37:	http://tesseract-ocr.googlecode.com/files/chr.traineddata.gz
-# Source37-md5:	6b2daa1f32e6234aa9a528dbfcd0c66e
+Source1:	http://tesseract-ocr.googlecode.com/files/tesseract-ocr-%{version}.ara.tar.gz
+# Source1-md5:	13d379238b32514c4bb73de02dba719f
+Source2:	http://tesseract-ocr.googlecode.com/files/tesseract-ocr-%{version}.eng.tar.gz
+# Source2-md5:	89c139a73e0e7b1225809fc7b226b6c9
+Source3:	http://tesseract-ocr.googlecode.com/files/tesseract-ocr-%{version}.hin.tar.gz
+# Source3-md5:	f2986f40c4d574c9526dde145608e2c0
+Source4:	http://tesseract-ocr.googlecode.com/files/tesseract-ocr-%{version}.osd.tar.gz
+# Source4-md5:	683486e01f5b87c17f2f5815f770ccb3
+Source5:	http://tesseract-ocr.googlecode.com/files/tesseract-ocr-%{version}.slk-frak.tar.gz
+# Source5-md5:	2f9c16f79dbabf30827f0dd91b1bfc66
+Source6:	http://tesseract-ocr.googlecode.com/files/tesseract-ocr-%{version}.tha.tar.gz
+# Source6-md5:	f96f5194331e3610dda1feef21f9e6a0
+Source10:	http://tesseract-ocr.googlecode.com/files/bul.traineddata.gz
+# Source10-md5:	a7501f9a48bc7ef2fa50cba8b8f0c7b1
+Source11:	http://tesseract-ocr.googlecode.com/files/cat.traineddata.gz
+# Source11-md5:	308099b2b95834916ec410191c86cd48
+Source12:	http://tesseract-ocr.googlecode.com/files/ces.traineddata.gz
+# Source12-md5:	2e97c952075064834f1cad6a133970fa
+Source13:	http://tesseract-ocr.googlecode.com/files/chi_sim.traineddata.gz
+# Source13-md5:	127e0b742b615d81c3b97a555acd8285
+Source14:	http://tesseract-ocr.googlecode.com/files/chi_tra.traineddata.gz
+# Source14-md5:	06fce5f5c0221286eab591819406d91e
+Source15:	http://tesseract-ocr.googlecode.com/files/chr.traineddata.gz
+# Source15-md5:	6b2daa1f32e6234aa9a528dbfcd0c66e
+Source16:	http://tesseract-ocr.googlecode.com/files/dan.traineddata.gz
+# Source16-md5:	7aaeb321dbf069d14d2601dc36d3dddc
+Source17:	http://tesseract-ocr.googlecode.com/files/dan-frak.traineddata.gz
+# Source17-md5:	cfa8a81df6a34940604fafa7353ffc43
+Source18:	http://tesseract-ocr.googlecode.com/files/deu.traineddata.gz
+# Source18-md5:	be81a761f61800f6d39393a31435fff3
+Source19:	http://tesseract-ocr.googlecode.com/files/deu-frak.traineddata.gz
+# Source19-md5:	e3117394f775a720117efadda202af50
+Source20:	http://tesseract-ocr.googlecode.com/files/ell.traineddata.gz
+# Source20-md5:	0d3a21c18f752eb058e7b854c37b7a69
+Source21:	http://tesseract-ocr.googlecode.com/files/fin.traineddata.gz
+# Source21-md5:	33812ef03197dce20b8c888409d8541a
+Source22:	http://tesseract-ocr.googlecode.com/files/fra.traineddata.gz
+# Source22-md5:	e6000550883684b5e93b7e0a21016287
+Source23:	http://tesseract-ocr.googlecode.com/files/hun.traineddata.gz
+# Source23-md5:	966fa3ebe24d7dfade951e0a4a9f52b5
+Source24:	http://tesseract-ocr.googlecode.com/files/ind.traineddata.gz
+# Source24-md5:	f4ae2e5668f693cc51c6e3c3f57a8f1d
+Source25:	http://tesseract-ocr.googlecode.com/files/ita.traineddata.gz
+# Source25-md5:	9a307661a010703cd2bb265a3da5eaff
+Source26:	http://tesseract-ocr.googlecode.com/files/jpn.traineddata.gz
+# Source26-md5:	cad3dd7c9401fa0676bf195456ba0c14
+Source27:	http://tesseract-ocr.googlecode.com/files/kor.traineddata.gz
+# Source27-md5:	909b811739b2e7d51cc3ca109998353a
+Source28:	http://tesseract-ocr.googlecode.com/files/lav.traineddata.gz
+# Source28-md5:	1f366f55e5e0725deb751ec847bf42dc
+Source29:	http://tesseract-ocr.googlecode.com/files/lit.traineddata.gz
+# Source29-md5:	1b4460ab998151f1ed8e48928ded58be
+Source30:	http://tesseract-ocr.googlecode.com/files/nld.traineddata.gz
+# Source30-md5:	89992f69802b9f4a36fec40efd95c503
+Source31:	http://tesseract-ocr.googlecode.com/files/nor.traineddata.gz
+# Source31-md5:	e09cc75fa17b8d4a5c2d02de73267aae
+Source32:	http://tesseract-ocr.googlecode.com/files/pol.traineddata.gz
+# Source32-md5:	c3d6447245663138f1d3aa4567c72192
+Source33:	http://tesseract-ocr.googlecode.com/files/por.traineddata.gz
+# Source33-md5:	d0b59fcfd80f9e09be890647ae93f00d
+Source34:	http://tesseract-ocr.googlecode.com/files/ron.traineddata.gz
+# Source34-md5:	7b50075692e7a07ac8f59e0cde51cfb9
+Source35:	http://tesseract-ocr.googlecode.com/files/rus.traineddata.gz
+# Source35-md5:	c477b7faddc044a4595135d0378be34c
+Source36:	http://tesseract-ocr.googlecode.com/files/slk.traineddata.gz
+# Source36-md5:	2e7fbf80215b38f423dcf78e396b92d7
+Source37:	http://tesseract-ocr.googlecode.com/files/slv.traineddata.gz
+# Source37-md5:	defc498fa09480ef0052fde79f4f84e5
+Source38:	http://tesseract-ocr.googlecode.com/files/spa.traineddata.gz
+# Source38-md5:	dd9078211127189995504f034468fcd6
+Source39:	http://tesseract-ocr.googlecode.com/files/srp.traineddata.gz
+# Source39-md5:	c1e0f0ef07d26a72063802370bbfe2c9
+Source40:	http://tesseract-ocr.googlecode.com/files/swe.traineddata.gz
+# Source40-md5:	3787ff0fc1a07517203466830f6f868e
+Source41:	http://tesseract-ocr.googlecode.com/files/swe-frak.traineddata.gz
+# Source41-md5:	fa11947f6617cfce96174eaec1d940ec
+Source42:	http://tesseract-ocr.googlecode.com/files/tgl.traineddata.gz
+# Source42-md5:	af86cab0da52fff7e83f9c7668617a21
+Source43:	http://tesseract-ocr.googlecode.com/files/tur.traineddata.gz
+# Source43-md5:	b0f4798bf1f9ee541ae73aff49f08821
+Source44:	http://tesseract-ocr.googlecode.com/files/ukr.traineddata.gz
+# Source44-md5:	56a82ac3994f0552d54fd14ff5ed6817
+Source45:	http://tesseract-ocr.googlecode.com/files/vie.traineddata.gz
+# Source45-md5:	af75c7a696b18a1d2e4f7e21a222cf95
 URL:		http://code.google.com/p/tesseract-ocr/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -89,6 +99,34 @@ Trained data for Tesseract Open Source OCR Engine.
 
 %description -l pl.UTF-8
 Wytrenowane dane dla Tesseracta - silnika OCR o otwartych źródłach.
+
+%package osd
+Summary:	Orientation and script detection data for Tesseract
+Summary(pl.UTF-8):	Dane dla Tesseracta pozwalające na wykrywanie orientacji i pisma
+Group:		Applications/Graphics
+Requires:	tesseract >= 3.01
+Provides:	tesseract-data = %{version}
+
+%description osd
+Orientation and script detection data for Tesseract.
+
+%description osd -l pl.UTF-8
+Dane dla Tesseracta pozwalające na wykrywanie orientacji i pisma.
+
+%package lang-ar
+Summary:	Arabic language data for Tesseract
+Summary(pl.UTF-8):	Dane języka arabskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= 3.01
+Provides:	tesseract-data = %{version}
+
+%description lang-ar
+This package contains the data files required to recognize Arabic
+language.
+
+%description lang-ar -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+arabskiego.
 
 %package lang-bg
 Summary:	Bulgarian language data for Tesseract
@@ -231,7 +269,7 @@ greckiego.
 Summary:	English language data for Tesseract
 Summary(pl.UTF-8):	Dane języka angielskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= 3.00
+Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-eng
 
@@ -273,6 +311,21 @@ language.
 %description lang-fr -l pl.UTF-8
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 francuskiego.
+
+%package lang-hi
+Summary:	Hindi language data for Tesseract
+Summary(pl.UTF-8):	Dane języka hindi dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= 3.01
+Provides:	tesseract-data = %{version}
+
+%description lang-hi
+This package contains the data files required to recognize Hindi
+language.
+
+%description lang-hi -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+hindi.
 
 %package lang-hu
 Summary:	Hungarian language data for Tesseract
@@ -475,16 +528,16 @@ rosyjskiego.
 Summary:	Slovakian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka słowackiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= 3.00
+Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
 
 %description lang-sk
 This package contains the data files required to recognize Slovakian
-language.
+language (including Fraktur).
 
 %description lang-sk -l pl.UTF-8
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
-słowackiego.
+słowackiego (także pisanego frakturą).
 
 %package lang-sl
 Summary:	Slovenian language data for Tesseract
@@ -562,6 +615,21 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 tagalskiego.
 
+%package lang-th
+Summary:	Thai language data for Tesseract
+Summary(pl.UTF-8):	Dane języka tajskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= 3.01
+Provides:	tesseract-data = %{version}
+
+%description lang-th
+This package contains the data files required to recognize Thai
+language.
+
+%description lang-th -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+tajskiego.
+
 %package lang-tr
 Summary:	Turkish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tureckiego dla Tesseracta
@@ -608,13 +676,21 @@ Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 wietnamskiego.
 
 %prep
+%setup -q -c -T -a1 -a2 -a3 -a4 -a5 -a6
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/tessdata
 
+# sources 1-6
 for l in \
-	bul cat ces chi_sim chi_tra chr dan dan-frak deu deu-frak ell eng fin \
+	ara eng hin osd slk-frak tha ; do
+	cp -p tesseract-ocr/tessdata/${l}.* $RPM_BUILD_ROOT%{_datadir}/tessdata
+done
+
+# sources 11+
+for l in \
+	bul cat ces chi_sim chi_tra chr dan dan-frak deu deu-frak ell fin \
 	fra hun ind ita jpn kor lav lit nld nor pol por ron rus slk slv spa \
 	srp swe swe-frak tgl tur ukr vie ; do
 	gzip -dc $RPM_SOURCE_DIR/${l}.traineddata.gz > $RPM_BUILD_ROOT%{_datadir}/tessdata/${l}.traineddata
@@ -622,6 +698,15 @@ done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files osd
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/osd.traineddata
+
+%files lang-ar
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/ara.cube.*
+%{_datadir}/tessdata/ara.traineddata
 
 %files lang-bg
 %defattr(644,root,root,755)
@@ -663,6 +748,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files lang-en
 %defattr(644,root,root,755)
+%{_datadir}/tessdata/eng.cube.*
+%{_datadir}/tessdata/eng.tesseract_cube.nn
 %{_datadir}/tessdata/eng.traineddata
 
 %files lang-fi
@@ -672,6 +759,12 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-fr
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/fra.traineddata
+
+%files lang-hi
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/hin.cube.*
+%{_datadir}/tessdata/hin.tesseract_cube.nn
+%{_datadir}/tessdata/hin.traineddata
 
 %files lang-hu
 %defattr(644,root,root,755)
@@ -728,6 +821,7 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-sk
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/slk.traineddata
+%{_datadir}/tessdata/slk-frak.traineddata
 
 %files lang-sl
 %defattr(644,root,root,755)
@@ -749,6 +843,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-tl
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/tgl.traineddata
+
+%files lang-th
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/tha.traineddata
 
 %files lang-tr
 %defattr(644,root,root,755)
