@@ -2,7 +2,7 @@ Summary:	Trained data for Tesseract Open Source OCR Engine
 Summary(pl.UTF-8):	Wytrenowane dane dla Tesseracta - silnika OCR o otwartych źródłach
 Name:		tesseract-data
 Version:	3.01
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Applications/Graphics
 #SourceDownload: http://code.google.com/p/tesseract-ocr/downloads/list
@@ -119,6 +119,7 @@ Summary(pl.UTF-8):	Dane języka arabskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-ar
 
 %description lang-ar
 This package contains the data files required to recognize Arabic
@@ -135,6 +136,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-deu
+Obsoletes:	tesseract-lang-bg
 
 %description lang-bg
 This package contains the data files required to recognize Bulgarian
@@ -150,6 +152,7 @@ Summary(pl.UTF-8):	Dane języka katalońskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-ca
 
 %description lang-ca
 This package contains the data files required to recognize Catalan
@@ -165,6 +168,7 @@ Summary(pl.UTF-8):	Dane języka czeskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-cs
 
 %description lang-cs
 This package contains the data files required to recognize Czech
@@ -180,6 +184,7 @@ Summary(pl.UTF-8):	Dane języka chińskiego uproszczonego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-zh_CN
 
 %description lang-zh_CN
 This package contains the data files required to recognize Chinese
@@ -195,6 +200,7 @@ Summary(pl.UTF-8):	Dane języka chińskiego tradycyjnego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-zh_TW
 
 %description lang-zh_TW
 This package contains the data files required to recognize Chinese
@@ -210,6 +216,7 @@ Summary(pl.UTF-8):	Dane języka czerokeskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-chr
 
 %description lang-chr
 This package contains the data files required to recognize Cherokee
@@ -225,6 +232,7 @@ Summary(pl.UTF-8):	Dane języka duńskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-da
 
 %description lang-da
 This package contains the data files required to recognize Danish
@@ -241,6 +249,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-deu
+Obsoletes:	tesseract-lang-de
 
 %description lang-de
 This package contains the data files required to recognize German
@@ -256,6 +265,7 @@ Summary(pl.UTF-8):	Dane języka greckiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-el
 
 %description lang-el
 This package contains the data files required to recognize Greek
@@ -272,6 +282,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-eng
+Obsoletes:	tesseract-lang-en
 
 %description lang-en
 This package contains the data files required to recognize English
@@ -287,6 +298,7 @@ Summary(pl.UTF-8):	Dane języka fińskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-fi
 
 %description lang-fi
 This package contains the data files required to recognize Finnish
@@ -303,6 +315,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-fra
+Obsoletes:	tesseract-lang-fr
 
 %description lang-fr
 This package contains the data files required to recognize French
@@ -318,6 +331,7 @@ Summary(pl.UTF-8):	Dane języka hindi dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-hi
 
 %description lang-hi
 This package contains the data files required to recognize Hindi
@@ -333,6 +347,7 @@ Summary(pl.UTF-8):	Dane języka węgierskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-hu
 
 %description lang-hu
 This package contains the data files required to recognize Hungarian
@@ -348,6 +363,7 @@ Summary(pl.UTF-8):	Dane języka indonezyjskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-id
 
 %description lang-id
 This package contains the data files required to recognize Indonesian
@@ -364,6 +380,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-ita
+Obsoletes:	tesseract-lang-it
 
 %description lang-it
 This package contains the data files required to recognize Italian
@@ -379,6 +396,7 @@ Summary(pl.UTF-8):	Dane języka japońskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-ja
 
 %description lang-ja
 This package contains the data files required to recognize Japanese
@@ -394,6 +412,7 @@ Summary(pl.UTF-8):	Dane języka koreańskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-ko
 
 %description lang-ko
 This package contains the data files required to recognize Korean
@@ -409,6 +428,7 @@ Summary(pl.UTF-8):	Dane języka łotewskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-lv
 
 %description lang-lv
 This package contains the data files required to recognize Latvian
@@ -424,6 +444,7 @@ Summary(pl.UTF-8):	Dane języka litewskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-lt
 
 %description lang-lt
 This package contains the data files required to recognize Lithuanian
@@ -440,6 +461,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-nl
+Obsoletes:	tesseract-lang-nl
 
 %description lang-nl
 This package contains the data files required to recognize Dutch
@@ -455,6 +477,7 @@ Summary(pl.UTF-8):	Dane języka norweskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-nb
 
 %description lang-nb
 This package contains the data files required to recognize Norwegian
@@ -470,6 +493,7 @@ Summary(pl.UTF-8):	Dane języka polskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-pl
 
 %description lang-pl
 This package contains the data files required to recognize Polish
@@ -485,6 +509,7 @@ Summary(pl.UTF-8):	Dane języka portugalskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-pt
 
 %description lang-pt
 This package contains the data files required to recognize Portuguese
@@ -500,6 +525,7 @@ Summary(pl.UTF-8):	Dane języka rumuńskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-ro
 
 %description lang-ro
 This package contains the data files required to recognize Romanian
@@ -515,6 +541,7 @@ Summary(pl.UTF-8):	Dane języka rosyjskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-ru
 
 %description lang-ru
 This package contains the data files required to recognize Russian
@@ -530,6 +557,7 @@ Summary(pl.UTF-8):	Dane języka słowackiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-sk
 
 %description lang-sk
 This package contains the data files required to recognize Slovakian
@@ -545,6 +573,7 @@ Summary(pl.UTF-8):	Dane języka słoweńskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-sl
 
 %description lang-sl
 This package contains the data files required to recognize Slovenian
@@ -561,6 +590,7 @@ Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-spa
+Obsoletes:	tesseract-lang-es
 
 %description lang-es
 This package contains the data files required to recognize Spanish
@@ -576,6 +606,7 @@ Summary(pl.UTF-8):	Dane języka serbskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-sr
 
 %description lang-sr
 This package contains the data files required to recognize Serbian
@@ -591,6 +622,7 @@ Summary(pl.UTF-8):	Dane języka szwedzkiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-sv
 
 %description lang-sv
 This package contains the data files required to recognize Swedish
@@ -606,6 +638,7 @@ Summary(pl.UTF-8):	Dane języka tagalskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-tl
 
 %description lang-tl
 This package contains the data files required to recognize Tagalog
@@ -621,6 +654,7 @@ Summary(pl.UTF-8):	Dane języka tajskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.01
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-th
 
 %description lang-th
 This package contains the data files required to recognize Thai
@@ -636,6 +670,7 @@ Summary(pl.UTF-8):	Dane języka tureckiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-tr
 
 %description lang-tr
 This package contains the data files required to recognize Turkish
@@ -651,6 +686,7 @@ Summary(pl.UTF-8):	Dane języka ukraińskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-uk
 
 %description lang-uk
 This package contains the data files required to recognize Ukrainian
@@ -666,6 +702,7 @@ Summary(pl.UTF-8):	Dane języka wietnamskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
+Obsoletes:	tesseract-lang-vi
 
 %description lang-vi
 This package contains the data files required to recognize Vietnamese
