@@ -1307,11 +1307,11 @@ Obsoletes:	tesseract-lang-sv
 
 %description lang-sv
 This package contains the data files required to recognize Swedish
-language (including Fraktur).
+language.
 
 %description lang-sv -l pl.UTF-8
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
-szwedzkiego (także pisanego frakturą).
+szwedzkiego.
 
 %package lang-syr
 Summary:	Syriac language data for Tesseract
