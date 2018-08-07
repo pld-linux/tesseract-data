@@ -1,14 +1,14 @@
 Summary:	Trained data for Tesseract Open Source OCR Engine
 Summary(pl.UTF-8):	Wytrenowane dane dla Tesseracta - silnika OCR o otwartych źródłach
 Name:		tesseract-data
-Version:	3.04.00
-%define	tess_ver	3.04
+Version:	4.00
+%define	tess_ver	4.0.0
 Release:	1
 License:	Apache v2.0
 Group:		Applications/Graphics
 #Source0Download: https://github.com/tesseract-ocr/tessdata/releases
 Source0:	https://github.com/tesseract-ocr/tessdata/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	b25e830d203af5c863081af3f684b53a
+# Source0-md5:	817831fd730eeb85076868d9590b628e
 URL:		https://github.com/tesseract-ocr/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
