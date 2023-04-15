@@ -1,14 +1,18 @@
+%define		tesseract_ver	4.0.0
+
 Summary:	Trained data for Tesseract Open Source OCR Engine
 Summary(pl.UTF-8):	Wytrenowane dane dla Tesseracta - silnika OCR o otwartych źródłach
 Name:		tesseract-data
-Version:	4.00
-%define	tess_ver	4.0.0
+Version:	4.1.0
 Release:	1
 License:	Apache v2.0
 Group:		Applications/Graphics
 #Source0Download: https://github.com/tesseract-ocr/tessdata/releases
-Source0:	https://github.com/tesseract-ocr/tessdata/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	817831fd730eeb85076868d9590b628e
+Source0:	https://github.com/tesseract-ocr/tessdata/archive/%{version}/tessdata-%{version}.tar.gz
+# Source0-md5:	89e25c7c40a59be7195422a01f57fcb2
+# from tessdata-4.00/kur.traineddata (Arabic version of kur data, dropped in 4.1)
+Source10:	kur.traineddata
+# Source10-md5:	e6d3776d097e008a9e965aa373a9ea29
 URL:		https://github.com/tesseract-ocr/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,7 +27,7 @@ Wytrenowane dane dla Tesseracta - silnika OCR o otwartych źródłach.
 Summary:	Mathematical equations recognition data for Tesseract
 Summary(pl.UTF-8):	Dane dla Tesseracta pozwalające na rozpoznawanie równań matematycznych
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description equ
@@ -37,7 +41,7 @@ matematycznych.
 Summary:	Orientation and script detection data for Tesseract
 Summary(pl.UTF-8):	Dane dla Tesseracta pozwalające na wykrywanie orientacji i pisma
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description osd
@@ -50,7 +54,7 @@ Dane dla Tesseracta pozwalające na wykrywanie orientacji i pisma.
 Summary:	Afrikaans language data for Tesseract
 Summary(pl.UTF-8):	Dane języka afrykanerskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-af
@@ -65,7 +69,7 @@ afrykanerskiego.
 Summary:	Amharic language data for Tesseract
 Summary(pl.UTF-8):	Dane języka amharskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-am
@@ -80,7 +84,7 @@ amharskiego.
 Summary:	Arabic language data for Tesseract
 Summary(pl.UTF-8):	Dane języka arabskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-ar
 
@@ -96,7 +100,7 @@ arabskiego.
 Summary:	Assamese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka asamskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-as
@@ -111,7 +115,7 @@ asamskiego.
 Summary:	Azerbaijani language data for Tesseract
 Summary(pl.UTF-8):	Dane języka azerskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-az
@@ -126,7 +130,7 @@ azerskiego.
 Summary:	Belarusian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka białoruskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-be
@@ -141,7 +145,7 @@ białoruskiego.
 Summary:	Bengali language data for Tesseract
 Summary(pl.UTF-8):	Dane języka bengalskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-bn
@@ -156,7 +160,7 @@ bengalskiego.
 Summary:	Tibetan language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tybetańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-bo
@@ -171,7 +175,7 @@ tybetańskiego.
 Summary:	Bosnian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka bośniackiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-bs
@@ -182,11 +186,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 bośniackiego.
 
+%package lang-br
+Summary:	Breton language data for Tesseract
+Summary(pl.UTF-8):	Dane języka bretońskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-br
+This package contains the data files required to recognize Breton
+language.
+
+%description lang-br -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+bretońskiego.
+
 %package lang-bg
 Summary:	Bulgarian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka bułgarskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-bg
 
@@ -218,7 +237,7 @@ katalońskiego.
 Summary:	Cebuano language data for Tesseract
 Summary(pl.UTF-8):	Dane języka cebuańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ceb
@@ -233,7 +252,7 @@ cebuańskiego.
 Summary:	Czech language data for Tesseract
 Summary(pl.UTF-8):	Dane języka czeskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-cs
 
@@ -249,7 +268,7 @@ czeskiego.
 Summary:	Chinese Simplified language data for Tesseract
 Summary(pl.UTF-8):	Dane języka chińskiego uproszczonego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-zh_CN
 
@@ -265,7 +284,7 @@ chińskiego uproszczonego.
 Summary:	Chinese Traditional language data for Tesseract
 Summary(pl.UTF-8):	Dane języka chińskiego tradycyjnego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-zh_TW
 
@@ -281,7 +300,7 @@ chińskiego tradycyjnego.
 Summary:	Cherokee language data for Tesseract
 Summary(pl.UTF-8):	Dane języka czerokeskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-chr
 
@@ -293,11 +312,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 czerokeskiego.
 
+%package lang-co
+Summary:	Corsican language data for Tesseract
+Summary(pl.UTF-8):	Dane języka korsykańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-co
+This package contains the data files required to recognize Corsican
+language.
+
+%description lang-co -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+korsykańskiego.
+
 %package lang-cy
 Summary:	Welsh language data for Tesseract
 Summary(pl.UTF-8):	Dane języka walijskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-cy
@@ -312,7 +346,7 @@ walijskiego.
 Summary:	Danish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka duńskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-da
 
@@ -328,10 +362,11 @@ duńskiego (także pisanego frakturą).
 Summary:	German language data for Tesseract
 Summary(pl.UTF-8):	Dane języka niemieckiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
-Obsoletes:	tesseract-deu
-Obsoletes:	tesseract-lang-de
+Obsoletes:	tesseract-deu < 2.00-1
+Obsoletes:	tesseract-lang-de < 3
+Obsoletes:	tesseract-lang-deu < 2.01
 
 %description lang-de
 This package contains the data files required to recognize German
@@ -341,11 +376,26 @@ language (including Fraktur).
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 niemieckiego (także pisanego frakturą).
 
+%package lang-dv
+Summary:	Divehi language data for Tesseract
+Summary(pl.UTF-8):	Dane języka divehi (malediwskiego) dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-dv
+This package contains the data files required to recognize Divehi
+language.
+
+%description lang-dv -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+divehi (malediwskiego).
+
 %package lang-dz
 Summary:	Dzongkha language data for Tesseract
 Summary(pl.UTF-8):	Dane języka dzongka dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-dz
@@ -360,7 +410,7 @@ dzongka.
 Summary:	Greek language data for Tesseract
 Summary(pl.UTF-8):	Dane języka greckiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-el
 
@@ -376,10 +426,11 @@ greckiego.
 Summary:	English language data for Tesseract
 Summary(pl.UTF-8):	Dane języka angielskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
-Obsoletes:	tesseract-eng
-Obsoletes:	tesseract-lang-en
+Obsoletes:	tesseract-eng < 2.00-1
+Obsoletes:	tesseract-lang-en < 3
+Obsoletes:	tesseract-lang-eng < 2.01
 
 %description lang-en
 This package contains the data files required to recognize English
@@ -393,7 +444,7 @@ angielskiego.
 Summary:	Middle English language data for Tesseract
 Summary(pl.UTF-8):	Dane języka angielskiego średniowiecznego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-enm
@@ -408,7 +459,7 @@ angielskiego średniowiecznego.
 Summary:	Esperanto language data for Tesseract
 Summary(pl.UTF-8):	Dane języka esperanto dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-eo
@@ -423,7 +474,7 @@ esperanto.
 Summary:	Estonian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka estońskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-et
@@ -438,7 +489,7 @@ estońskiego.
 Summary:	Basque language data for Tesseract
 Summary(pl.UTF-8):	Dane języka baskijkiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-eu
@@ -449,11 +500,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 baskijkiego.
 
+%package lang-fo
+Summary:	Faroese language data for Tesseract
+Summary(pl.UTF-8):	Dane języka farerskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-fo
+This package contains the data files required to recognize Faroese
+language.
+
+%description lang-fo -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+farerskiego.
+
 %package lang-fa
 Summary:	Persian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka perskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-fa
@@ -464,11 +530,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 perskiego.
 
+%package lang-fil
+Summary:	Filipino language data for Tesseract
+Summary(pl.UTF-8):	Dane języka pilipino dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-fil
+This package contains the data files required to recognize Filipino
+language.
+
+%description lang-fil -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+pilipino.
+
 %package lang-fi
 Summary:	Finnish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka fińskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-fi
 
@@ -484,10 +565,11 @@ fińskiego.
 Summary:	French language data for Tesseract
 Summary(pl.UTF-8):	Dane języka francuskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
-Obsoletes:	tesseract-fra
-Obsoletes:	tesseract-lang-fr
+Obsoletes:	tesseract-fra < 2.00-1
+Obsoletes:	tesseract-lang-fr < 3
+Obsoletes:	tesseract-lang-fra < 2.01
 
 %description lang-fr
 This package contains the data files required to recognize French
@@ -501,7 +583,7 @@ francuskiego.
 Summary:	Frankish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka frankijskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-frk
@@ -516,7 +598,7 @@ frankijskiego.
 Summary:	Middle French language data for Tesseract
 Summary(pl.UTF-8):	Dane języka francuskiego średniowiecznego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-frm
@@ -527,11 +609,41 @@ French language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 francuskiego średniowiecznego.
 
+%package lang-fy
+Summary:	Frisian language data for Tesseract
+Summary(pl.UTF-8):	Dane języka fryzyjskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-fy
+This package contains the data files required to recognize Frisian
+language.
+
+%description lang-fy -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+fryzyjskiego.
+
+%package lang-gd
+Summary:	Gaelic language data for Tesseract
+Summary(pl.UTF-8):	Dane języka szkockiego gaelickiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-gd
+This package contains the data files required to recognize Gaelic
+language.
+
+%description lang-gd -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+szkockiego gaelickiego.
+
 %package lang-ga
 Summary:	Irish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka irlandzkiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ga
@@ -546,7 +658,7 @@ irlandzkiego.
 Summary:	Galician language data for Tesseract
 Summary(pl.UTF-8):	Dane języka galicyjskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-gl
@@ -561,7 +673,7 @@ galicyjskiego.
 Summary:	Ancient Greek language data for Tesseract
 Summary(pl.UTF-8):	Dane języka greckiego starożytnego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-grc
@@ -576,7 +688,7 @@ greckiego starożytnego.
 Summary:	Gujarati language data for Tesseract
 Summary(pl.UTF-8):	Dane języka gudźarati dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-gu
@@ -591,7 +703,7 @@ gudźarati.
 Summary:	Haitian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka haitańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ht
@@ -606,7 +718,7 @@ haitańskiego.
 Summary:	Hebrew language data for Tesseract
 Summary(pl.UTF-8):	Dane języka hebrajskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-he
@@ -621,7 +733,7 @@ hebrajskiego.
 Summary:	Hindi language data for Tesseract
 Summary(pl.UTF-8):	Dane języka hindi dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-hi
 
@@ -637,7 +749,7 @@ hindi.
 Summary:	Croatian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka chorwackiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-hr
@@ -652,7 +764,7 @@ chorwackiego.
 Summary:	Hungarian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka węgierskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-hu
 
@@ -664,11 +776,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 węgierskiego.
 
+%package lang-hy
+Summary:	Armenian language data for Tesseract
+Summary(pl.UTF-8):	Dane języka ormiańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-hy
+This package contains the data files required to recognize Armenian
+language.
+
+%description lang-hy -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+ormiańskiego.
+
 %package lang-iu
 Summary:	Inuktitut language data for Tesseract
 Summary(pl.UTF-8):	Dane języka inuktitut dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-iu
@@ -683,7 +810,7 @@ inuktitut.
 Summary:	Indonesian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka indonezyjskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-id
 
@@ -699,7 +826,7 @@ indonezyjskiego.
 Summary:	Icelandic language data for Tesseract
 Summary(pl.UTF-8):	Dane języka islandzkiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-is
@@ -716,8 +843,9 @@ Summary(pl.UTF-8):	Dane języka włoskiego dla Tesseracta
 Group:		Applications/Graphics
 Requires:	tesseract >= 3.00
 Provides:	tesseract-data = %{version}
-Obsoletes:	tesseract-ita
-Obsoletes:	tesseract-lang-it
+Obsoletes:	tesseract-ita < 2.00-1
+Obsoletes:	tesseract-lang-it < 3
+Obsoletes:	tesseract-lang-ita < 2.01
 
 %description lang-it
 This package contains the data files required to recognize Italian
@@ -731,7 +859,7 @@ włoskiego.
 Summary:	Javanese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka jawajskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-jv
@@ -746,7 +874,7 @@ jawajskiego.
 Summary:	Japanese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka japońskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-ja
 
@@ -762,7 +890,7 @@ japońskiego.
 Summary:	Kannada language data for Tesseract
 Summary(pl.UTF-8):	Dane języka kannada dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-kn
@@ -777,7 +905,7 @@ kannada.
 Summary:	Georgian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka gruzińskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ka
@@ -792,7 +920,7 @@ gruzińskiego.
 Summary:	Kazakh language data for Tesseract
 Summary(pl.UTF-8):	Dane języka kazaskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-kk
@@ -807,7 +935,7 @@ kazaskiego.
 Summary:	Kkmer language data for Tesseract
 Summary(pl.UTF-8):	Dane języka khmerskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-km
@@ -822,7 +950,7 @@ khmerskiego.
 Summary:	Kirghiz language data for Tesseract
 Summary(pl.UTF-8):	Dane języka kirgiskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ky
@@ -833,11 +961,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 kirgiskiego.
 
+%package lang-kmr
+Summary:	Kurmanji (Northern Kurdish) language data for Tesseract
+Summary(pl.UTF-8):	Dane języka kurmandżi (północnokurdyjskiego) dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-kmr
+This package contains the data files required to recognize Kurmanji
+(Northern Kurdish) language.
+
+%description lang-kmr -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+kurmandżi (północnokurdyjskiego).
+
 %package lang-ko
 Summary:	Korean language data for Tesseract
 Summary(pl.UTF-8):	Dane języka koreańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-ko
 
@@ -853,7 +996,7 @@ koreańskiego.
 Summary:	Kurdish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka kurdyjskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ku
@@ -868,7 +1011,7 @@ kurdyjskiego.
 Summary:	Lao language data for Tesseract
 Summary(pl.UTF-8):	Dane języka laotańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-lo
@@ -883,7 +1026,7 @@ laotańskiego.
 Summary:	Latin language data for Tesseract
 Summary(pl.UTF-8):	Dane języka łacińskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-la
@@ -898,7 +1041,7 @@ Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 Summary:	Latvian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka łotewskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-lv
 
@@ -914,7 +1057,7 @@ Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 Summary:	Lithuanian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka litewskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-lt
 
@@ -926,11 +1069,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 litewskiego.
 
+%package lang-lb
+Summary:	Luxembourgish language data for Tesseract
+Summary(pl.UTF-8):	Dane języka luksemburskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-lb
+This package contains the data files required to recognize
+Luxembourgish language.
+
+%description lang-lb -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+luksemburskiego.
+
 %package lang-ml
 Summary:	Malayalam language data for Tesseract
 Summary(pl.UTF-8):	Dane języka malajalam dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ml
@@ -945,7 +1103,7 @@ malajalam.
 Summary:	Marathi language data for Tesseract
 Summary(pl.UTF-8):	Dane języka marathi dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-mr
@@ -960,7 +1118,7 @@ marathi.
 Summary:	Macedonian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka macedońskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-mk
@@ -975,7 +1133,7 @@ macedońskiego.
 Summary:	Maltese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka maltańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-mt
@@ -986,11 +1144,41 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 maltańskiego.
 
+%package lang-mn
+Summary:	Mongolian language data for Tesseract
+Summary(pl.UTF-8):	Dane języka mongolskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-mn
+This package contains the data files required to recognize Mongolian
+language.
+
+%description lang-mn -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+mongolskiego.
+
+%package lang-mi
+Summary:	Maori language data for Tesseract
+Summary(pl.UTF-8):	Dane języka maoryskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-mi
+This package contains the data files required to recognize Maori
+language.
+
+%description lang-mi -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+maoryskiego.
+
 %package lang-ms
 Summary:	Malay language data for Tesseract
 Summary(pl.UTF-8):	Dane języka malajskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ms
@@ -1005,7 +1193,7 @@ malajskiego.
 Summary:	Burmese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka birmańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-my
@@ -1020,7 +1208,7 @@ birmańskiego.
 Summary:	Nepali language data for Tesseract
 Summary(pl.UTF-8):	Dane języka nepalskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ne
@@ -1035,10 +1223,11 @@ nepalskiego.
 Summary:	Dutch language data for Tesseract
 Summary(pl.UTF-8):	Dane języka holenderskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
-Obsoletes:	tesseract-nl
-Obsoletes:	tesseract-lang-nl
+Obsoletes:	tesseract-nld < 2.00-1
+Obsoletes:	tesseract-lang-nl < 3
+Obsoletes:	tesseract-lang-nld < 2.01
 
 %description lang-nl
 This package contains the data files required to recognize Dutch
@@ -1052,7 +1241,7 @@ holenderskiego.
 Summary:	Norwegian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka norweskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-nb
 
@@ -1064,11 +1253,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 norweskiego.
 
+%package lang-oc
+Summary:	Occitan language data for Tesseract
+Summary(pl.UTF-8):	Dane języka okcytańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-oc
+This package contains the data files required to recognize Occitan
+language.
+
+%description lang-oc -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+okcytańskiego.
+
 %package lang-or
 Summary:	Oriya language data for Tesseract
 Summary(pl.UTF-8):	Dane języka orija dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-or
@@ -1083,7 +1287,7 @@ orija.
 Summary:	Panjabi language data for Tesseract
 Summary(pl.UTF-8):	Dane języka pendżabskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-pa
@@ -1098,9 +1302,10 @@ pendżabskiego.
 Summary:	Polish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka polskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-pl
+Obsoletes:	tesseract-polish < 0.1
 
 %description lang-pl
 This package contains the data files required to recognize Polish
@@ -1114,7 +1319,7 @@ polskiego.
 Summary:	Portuguese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka portugalskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-pt
 
@@ -1130,7 +1335,7 @@ portugalskiego.
 Summary:	Pushto language data for Tesseract
 Summary(pl.UTF-8):	Dane języka paszto dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ps
@@ -1141,11 +1346,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 paszto.
 
+%package lang-qu
+Summary:	Quechua language data for Tesseract
+Summary(pl.UTF-8):	Dane języka keczua dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-qu
+This package contains the data files required to recognize Quechua
+language.
+
+%description lang-qu -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+keczua.
+
 %package lang-ro
 Summary:	Romanian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka rumuńskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-ro
 
@@ -1161,7 +1381,7 @@ rumuńskiego.
 Summary:	Russian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka rosyjskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-ru
 
@@ -1177,7 +1397,7 @@ rosyjskiego.
 Summary:	Sanskrit language data for Tesseract
 Summary(pl.UTF-8):	Dane sanskrytu dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-sa
@@ -1191,7 +1411,7 @@ Ten pakiet zawiera pliki danych potrzebne do rozpoznawania sanskrytu.
 Summary:	Sinhala language data for Tesseract
 Summary(pl.UTF-8):	Dane języka syngaleskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-si
@@ -1206,7 +1426,7 @@ syngaleskiego.
 Summary:	Slovakian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka słowackiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-sk
 
@@ -1222,7 +1442,7 @@ słowackiego (także pisanego frakturą).
 Summary:	Slovenian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka słoweńskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-sl
 
@@ -1234,14 +1454,30 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 słoweńskiego.
 
+%package lang-sd
+Summary:	Sindhi language data for Tesseract
+Summary(pl.UTF-8):	Dane języka sindhi dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-sd
+This package contains the data files required to recognize Sindhi
+language.
+
+%description lang-sd -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+sindhi.
+
 %package lang-es
 Summary:	Spanish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka hiszpańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
-Obsoletes:	tesseract-spa
-Obsoletes:	tesseract-lang-es
+Obsoletes:	tesseract-spa < 2.00-1
+Obsoletes:	tesseract-lang-es < 3
+Obsoletes:	tesseract-lang-spa < 2.01
 
 %description lang-es
 This package contains the data files required to recognize Spanish
@@ -1255,7 +1491,7 @@ hiszpańskiego.
 Summary:	Albanian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka albańskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-sq
@@ -1270,7 +1506,7 @@ albańskiego.
 Summary:	Serbian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka serbskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-sr
 
@@ -1282,11 +1518,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 serbskiego.
 
+%package lang-su
+Summary:	Sundanese language data for Tesseract
+Summary(pl.UTF-8):	Dane języka sundajskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-su
+This package contains the data files required to recognize Sundanese
+language.
+
+%description lang-su -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+sundajskiego.
+
 %package lang-sw
 Summary:	Swahili language data for Tesseract
 Summary(pl.UTF-8):	Dane języka suahili dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-sw
@@ -1301,7 +1552,7 @@ suahili.
 Summary:	Swedish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka szwedzkiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-sv
 
@@ -1317,7 +1568,7 @@ szwedzkiego.
 Summary:	Syriac language data for Tesseract
 Summary(pl.UTF-8):	Dane języka syryjskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-syr
@@ -1332,7 +1583,7 @@ syryjskiego.
 Summary:	Tamil language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tamilskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ta
@@ -1343,11 +1594,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 tamilskiego.
 
+%package lang-tt
+Summary:	Tatar language data for Tesseract
+Summary(pl.UTF-8):	Dane języka tatarskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-tt
+This package contains the data files required to recognize Tatar
+language.
+
+%description lang-tt -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+tatarskiego.
+
 %package lang-te
 Summary:	Telugu language data for Tesseract
 Summary(pl.UTF-8):	Dane języka telugu dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-te
@@ -1362,7 +1628,7 @@ telugu.
 Summary:	Tajik language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tadżyckiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-tg
@@ -1377,7 +1643,7 @@ tadżyckiego.
 Summary:	Tagalog language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tagalskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-tl
 
@@ -1393,7 +1659,7 @@ tagalskiego.
 Summary:	Thai language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tajskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-th
 
@@ -1409,7 +1675,7 @@ tajskiego.
 Summary:	Tigrinya language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tigrinia dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ti
@@ -1420,11 +1686,26 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 tigrinia.
 
+%package lang-to
+Summary:	Tongan language data for Tesseract
+Summary(pl.UTF-8):	Dane języka tonga (z Wysp Tonga) dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-to
+This package contains the data files required to recognize Tongan
+language.
+
+%description lang-to -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+tonga (z wysp Tonga).
+
 %package lang-tr
 Summary:	Turkish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka tureckiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-tr
 
@@ -1440,7 +1721,7 @@ tureckiego.
 Summary:	Uighur language data for Tesseract
 Summary(pl.UTF-8):	Dane języka ujgurskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ug
@@ -1455,7 +1736,7 @@ ujgurskiego.
 Summary:	Ukrainian language data for Tesseract
 Summary(pl.UTF-8):	Dane języka ukraińskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-uk
 
@@ -1471,7 +1752,7 @@ ukraińskiego.
 Summary:	Urdu language data for Tesseract
 Summary(pl.UTF-8):	Dane języka urdu dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-ur
@@ -1486,7 +1767,7 @@ urdu.
 Summary:	Uzbek language data for Tesseract
 Summary(pl.UTF-8):	Dane języka uzbeckiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-uz
@@ -1501,7 +1782,7 @@ uzbeckiego.
 Summary:	Vietnamese language data for Tesseract
 Summary(pl.UTF-8):	Dane języka wietnamskiego dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 Obsoletes:	tesseract-lang-vi
 
@@ -1517,7 +1798,7 @@ wietnamskiego.
 Summary:	Yiddish language data for Tesseract
 Summary(pl.UTF-8):	Dane języka jidysz dla Tesseracta
 Group:		Applications/Graphics
-Requires:	tesseract >= %{tess_ver}
+Requires:	tesseract >= %{tesseract_ver}
 Provides:	tesseract-data = %{version}
 
 %description lang-yi
@@ -1528,6 +1809,514 @@ language.
 Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
 jidysz.
 
+%package lang-yo
+Summary:	Yoruba language data for Tesseract
+Summary(pl.UTF-8):	Dane języka joruba dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description lang-yo
+This package contains the data files required to recognize Yoruba
+language.
+
+%description lang-yo -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania języka
+joruba.
+
+%package script-Arab
+Summary:	Arabic script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma arabskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Arab
+This package contains the data files required to recognize Arabic
+script.
+
+%description script-Arab -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+arabskiego.
+
+%package script-Armn
+Summary:	Armenian script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma ormiańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Armn
+This package contains the data files required to recognize Armenian
+script.
+
+%description script-Armn -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+ormiańskiego.
+
+%package script-Beng
+Summary:	Bengali script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma bengalskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Beng
+This package contains the data files required to recognize Bengali
+script.
+
+%description script-Beng -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+bengalskiego.
+
+%package script-Cans
+Summary:	Canadian Aboriginal script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma kanadyjskich autochtonów dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Cans
+This package contains the data files required to recognize Canadian
+Aboriginal script.
+
+%description script-Cans -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+kanadyjskich autochtonów.
+
+%package script-Cher
+Summary:	Cherokee script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma czerokeskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Cher
+This package contains the data files required to recognize Cherokee
+script.
+
+%description script-Cher -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+czerokeskiego.
+
+%package script-Cyrl
+Summary:	Cyrillic script data for Tesseract
+Summary(pl.UTF-8):	Dane cyrylicy dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Cyrl
+This package contains the data files required to recognize Cyrillic
+script.
+
+%description script-Cyrl -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania cyrylicy.
+
+%package script-Deva
+Summary:	Devanagari script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma dewanagari dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Deva
+This package contains the data files required to recognize Devanagari
+script.
+
+%description script-Deva -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+dewanagari.
+
+%package script-Ethi
+Summary:	Ethiopic script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma etiopskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Ethi
+This package contains the data files required to recognize Ethiopic
+script.
+
+%description script-Ethi -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+etiopskiego.
+
+%package script-Latf
+Summary:	Latin Fraktur script data for Tesseract
+Summary(pl.UTF-8):	Dane fraktury łacińskiej dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Latf
+This package contains the data files required to recognize Latin
+Fraktur script.
+
+%description script-Latf -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania fraktury
+łacińskiej.
+
+%package script-Geor
+Summary:	Georgian script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma gruzińskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Geor
+This package contains the data files required to recognize Georgian
+script.
+
+%description script-Geor -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+gruzińskiego.
+
+%package script-Grek
+Summary:	Greek script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma greckiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Grek
+This package contains the data files required to recognize Greek
+script.
+
+%description script-Grek -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+greckiego.
+
+%package script-Gujr
+Summary:	Gujarati script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma gudźarati dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Gujr
+This package contains the data files required to recognize Gujarati
+script.
+
+%description script-Gujr -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+gudźarati.
+
+%package script-Guru
+Summary:	Gurmukhi script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma gurmukhi dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Guru
+This package contains the data files required to recognize Gurmukhi
+script.
+
+%description script-Guru -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+gurmukhi.
+
+%package script-Hans
+Summary:	Han (simplified variant) script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma chińskiego uproszczonego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Hans
+This package contains the data files required to recognize Han script
+in simplified variant.
+
+%description script-Hans -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+chińskiego uproszczonego.
+
+%package script-Hant
+Summary:	Han (tranditional variant) script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma chińskiego tradycyjnego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Hant
+This package contains the data files required to recognize Han script
+in tranditional variant.
+
+%description script-Hant -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+chińskiego tradycyjnego.
+
+%package script-Hang
+Summary:	Hangul script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma hangyl dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Hang
+This package contains the data files required to recognize Hangul
+script.
+
+%description script-Hang -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+hangyl.
+
+%package script-Hebr
+Summary:	Hebrew script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma hebrajskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Hebr
+This package contains the data files required to recognize Hebrew
+script.
+
+%description script-Hebr -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+hebrajskiego.
+
+%package script-Hrkt
+Summary:	Japanese (Hiragana and Katakana) script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma japońskiego (hiragana i katakana) dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Hrkt
+This package contains the data files required to recognize Japanese
+(Hiragana and Katakana) script.
+
+%description script-Hrkt -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+japońskiego (hiragana i katakana).
+
+%package script-Knda
+Summary:	Kannada script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma kannada dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Knda
+This package contains the data files required to recognize Kannada
+script.
+
+%description script-Knda -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+kannada.
+
+%package script-Khmr
+Summary:	Khmer script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma khmerskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Khmr
+This package contains the data files required to recognize Khmer
+script.
+
+%description script-Khmr -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+khmerskiego.
+
+%package script-Laoo
+Summary:	Lao script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma laotańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Laoo
+This package contains the data files required to recognize Lao script.
+
+%description script-Laoo -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+laotańskiego.
+
+%package script-Latn
+Summary:	Latin script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma łacińskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Latn
+This package contains the data files required to recognize Latin
+script.
+
+%description script-Latn -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+łacińskiego.
+
+%package script-Mlym
+Summary:	Malayalam script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma malajalam dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Mlym
+This package contains the data files required to recognize Malayalam
+script.
+
+%description script-Mlym -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+malajalam.
+
+%package script-Mymr
+Summary:	Myanmar script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma birmańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Mymr
+This package contains the data files required to recognize Myanmar
+script.
+
+%description script-Mymr -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+birmańskiego.
+
+%package script-Orya
+Summary:	Oriya script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma orija dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Orya
+This package contains the data files required to recognize Oriya
+script.
+
+%description script-Orya -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+orija.
+
+%package script-Sinh
+Summary:	Sinhala script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma syngaleskiego (sinhala) dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Sinh
+This package contains the data files required to recognize Sinhala
+script.
+
+%description script-Sinh -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+syngaleskiego (sinhala).
+
+%package script-Syrc
+Summary:	Syriac script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma syryjskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Syrc
+This package contains the data files required to recognize Syriac
+script.
+
+%description script-Syrc -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+syryjskiego.
+
+%package script-Taml
+Summary:	Tamil script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma tamilskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Taml
+This package contains the data files required to recognize Tamil
+script.
+
+%description script-Taml -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+tamilskiego.
+
+%package script-Telu
+Summary:	Telugu script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma telugu dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Telu
+This package contains the data files required to recognize Telugu
+script.
+
+%description script-Telu -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+telugu.
+
+%package script-Thaa
+Summary:	Thaana script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma thaana dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Thaa
+This package contains the data files required to recognize Thaana
+script.
+
+%description script-Thaa -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+thaana.
+
+%package script-Thai
+Summary:	Thai script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma tajskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Thai
+This package contains the data files required to recognize Thai
+script.
+
+%description script-Thai -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+tajskiego.
+
+%package script-Tibt
+Summary:	Tibetan script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma tybetańskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Tibt
+This package contains the data files required to recognize Tibetan
+script.
+
+%description script-Tibt -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+tybetańskiego.
+
+%package script-Vietnamese
+Summary:	Vietnamese script data for Tesseract
+Summary(pl.UTF-8):	Dane pisma wietnamskiego dla Tesseracta
+Group:		Applications/Graphics
+Requires:	tesseract >= %{tesseract_ver}
+Provides:	tesseract-data = %{version}
+
+%description script-Vietnamese
+This package contains the data files required to recognize Vietnamese
+script.
+
+%description script-Vietnamese -l pl.UTF-8
+Ten pakiet zawiera pliki danych potrzebne do rozpoznawania pisma
+wietnamskiego.
+
 %prep
 
 %install
@@ -1535,8 +2324,19 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}
 
 # extract directly to buildroot to avoid copying 1+GB of data
-%{__tar} xzf %{SOURCE0} -C $RPM_BUILD_ROOT%{_datadir}
+%{__tar} xf %{SOURCE0} -C $RPM_BUILD_ROOT%{_datadir}
 %{__mv} $RPM_BUILD_ROOT%{_datadir}/tessdata-%{version} $RPM_BUILD_ROOT%{_datadir}/tessdata
+
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/tessdata/{.gitmodules,LICENSE}
+
+# packaged in tesseract
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/tessdata/{configs,pdf.ttf}
+
+# FIXME: package in some common subpackage?
+#install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+#%{__mv} $RPM_BUILD_ROOT%{_datadir}/tessdata/README.md $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+
+cp -p %{SOURCE10} $RPM_BUILD_ROOT%{_datadir}/tessdata
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -1559,7 +2359,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files lang-ar
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/ara.cube.*
 %{_datadir}/tessdata/ara.traineddata
 
 %files lang-as
@@ -1587,6 +2386,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/bos.traineddata
 
+%files lang-br
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/bre.traineddata
+
 %files lang-bg
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/bul.traineddata
@@ -1606,14 +2409,20 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-zh_CN
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/chi_sim.traineddata
+%{_datadir}/tessdata/chi_sim_vert.traineddata
 
 %files lang-zh_TW
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/chi_tra.traineddata
+%{_datadir}/tessdata/chi_tra_vert.traineddata
 
 %files lang-chr
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/chr.traineddata
+
+%files lang-co
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/cos.traineddata
 
 %files lang-cy
 %defattr(644,root,root,755)
@@ -1629,6 +2438,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/tessdata/deu.traineddata
 %{_datadir}/tessdata/deu_frak.traineddata
 
+%files lang-dv
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/div.traineddata
+
 %files lang-dz
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/dzo.traineddata
@@ -1639,8 +2452,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files lang-en
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/eng.cube.*
-%{_datadir}/tessdata/eng.tesseract_cube.nn
 %{_datadir}/tessdata/eng.traineddata
 
 %files lang-enm
@@ -1659,9 +2470,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/eus.traineddata
 
+%files lang-fo
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/fao.traineddata
+
 %files lang-fa
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/fas.traineddata
+
+%files lang-fil
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/fil.traineddata
 
 %files lang-fi
 %defattr(644,root,root,755)
@@ -1669,8 +2488,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files lang-fr
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/fra.cube.*
-%{_datadir}/tessdata/fra.tesseract_cube.nn
 %{_datadir}/tessdata/fra.traineddata
 
 %files lang-frk
@@ -1680,6 +2497,14 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-frm
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/frm.traineddata
+
+%files lang-fy
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/fry.traineddata
+
+%files lang-gd
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/gla.traineddata
 
 %files lang-ga
 %defattr(644,root,root,755)
@@ -1707,8 +2532,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files lang-hi
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/hin.cube.*
-%{_datadir}/tessdata/hin.tesseract_cube.nn
 %{_datadir}/tessdata/hin.traineddata
 
 %files lang-hr
@@ -1718,6 +2541,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-hu
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/hun.traineddata
+
+%files lang-hy
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/hye.traineddata
 
 %files lang-iu
 %defattr(644,root,root,755)
@@ -1733,8 +2560,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files lang-it
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/ita.cube.*
-%{_datadir}/tessdata/ita.tesseract_cube.nn
 %{_datadir}/tessdata/ita.traineddata
 %{_datadir}/tessdata/ita_old.traineddata
 
@@ -1745,6 +2570,7 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-ja
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/jpn.traineddata
+%{_datadir}/tessdata/jpn_vert.traineddata
 
 %files lang-kn
 %defattr(644,root,root,755)
@@ -1767,9 +2593,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/kir.traineddata
 
+%files lang-kmr
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/kmr.traineddata
+
 %files lang-ko
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/kor.traineddata
+%{_datadir}/tessdata/kor_vert.traineddata
 
 %files lang-ku
 %defattr(644,root,root,755)
@@ -1791,6 +2622,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/lit.traineddata
 
+%files lang-lb
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/ltz.traineddata
+
 %files lang-ml
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/mal.traineddata
@@ -1806,6 +2641,14 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-mt
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/mlt.traineddata
+
+%files lang-mn
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/mon.traineddata
+
+%files lang-mi
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/mri.traineddata
 
 %files lang-ms
 %defattr(644,root,root,755)
@@ -1827,6 +2670,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/nor.traineddata
 
+%files lang-oc
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/oci.traineddata
+
 %files lang-or
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/ori.traineddata
@@ -1847,13 +2694,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/pus.traineddata
 
+%files lang-qu
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/que.traineddata
+
 %files lang-ro
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/ron.traineddata
 
 %files lang-ru
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/rus.cube.*
 %{_datadir}/tessdata/rus.traineddata
 
 %files lang-sa
@@ -1873,9 +2723,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/slv.traineddata
 
+%files lang-sd
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/snd.traineddata
+
 %files lang-es
 %defattr(644,root,root,755)
-%{_datadir}/tessdata/spa.cube.*
 %{_datadir}/tessdata/spa.traineddata
 %{_datadir}/tessdata/spa_old.traineddata
 
@@ -1887,6 +2740,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/srp.traineddata
 %{_datadir}/tessdata/srp_latn.traineddata
+
+%files lang-su
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/sun.traineddata
 
 %files lang-sw
 %defattr(644,root,root,755)
@@ -1903,6 +2760,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-ta
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/tam.traineddata
+
+%files lang-tt
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/tat.traineddata
 
 %files lang-te
 %defattr(644,root,root,755)
@@ -1923,6 +2784,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-ti
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/tir.traineddata
+
+%files lang-to
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/ton.traineddata
 
 %files lang-tr
 %defattr(644,root,root,755)
@@ -1952,3 +2817,143 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-yi
 %defattr(644,root,root,755)
 %{_datadir}/tessdata/yid.traineddata
+
+%files lang-yo
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/yor.traineddata
+
+%files script-Arab
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Arabic.traineddata
+
+%files script-Armn
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Armenian.traineddata
+
+%files script-Beng
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Bengali.traineddata
+
+%files script-Cans
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Canadian_Aboriginal.traineddata
+
+%files script-Cher
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Cherokee.traineddata
+
+%files script-Cyrl
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Cyrillic.traineddata
+
+%files script-Deva
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Devanagari.traineddata
+
+%files script-Ethi
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Ethiopic.traineddata
+
+%files script-Latf
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Fraktur.traineddata
+
+%files script-Geor
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Georgian.traineddata
+
+%files script-Grek
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Greek.traineddata
+
+%files script-Gujr
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Gujarati.traineddata
+
+%files script-Guru
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Gurmukhi.traineddata
+
+%files script-Hans
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/HanS.traineddata
+%{_datadir}/tessdata/script/HanS_vert.traineddata
+
+%files script-Hant
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/HanT.traineddata
+%{_datadir}/tessdata/script/HanT_vert.traineddata
+
+%files script-Hang
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Hangul.traineddata
+%{_datadir}/tessdata/script/Hangul_vert.traineddata
+
+%files script-Hebr
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Hebrew.traineddata
+
+%files script-Hrkt
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Japanese.traineddata
+%{_datadir}/tessdata/script/Japanese_vert.traineddata
+
+%files script-Knda
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Kannada.traineddata
+
+%files script-Khmr
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Khmer.traineddata
+
+%files script-Laoo
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Lao.traineddata
+
+%files script-Latn
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Latin.traineddata
+
+%files script-Mlym
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Malayalam.traineddata
+
+%files script-Mymr
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Myanmar.traineddata
+
+%files script-Orya
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Oriya.traineddata
+
+%files script-Sinh
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Sinhala.traineddata
+
+%files script-Syrc
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Syriac.traineddata
+
+%files script-Taml
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Tamil.traineddata
+
+%files script-Telu
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Telugu.traineddata
+
+%files script-Thaa
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Thaana.traineddata
+
+%files script-Thai
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Thai.traineddata
+
+%files script-Tibt
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Tibetan.traineddata
+
+%files script-Vietnamese
+%defattr(644,root,root,755)
+%{_datadir}/tessdata/script/Vietnamese.traineddata
